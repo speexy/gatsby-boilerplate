@@ -1,6 +1,9 @@
 ---
 templateKey: post
 title: post 1
+meta:
+  title: Post 1
+  description: description 1
 excerpt: hello world
 image: /media/hex.jpg
 content:

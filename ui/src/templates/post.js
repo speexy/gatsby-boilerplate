@@ -6,10 +6,10 @@ import styles from './post.module.css';
 
 export default ({ data }) => {
 
-    const { title, image } = data.markdownRemark.frontmatter;
+    const { title, meta, image } = data.markdownRemark.frontmatter;
 
     return (
-        <Layout>
+        <Layout meta={meta}>
             <div className={styles.post}>
                 <h1>{title}</h1>
                 <img src={image}/>
@@ -26,6 +26,10 @@ export const postQuery = graphql`
       html
       frontmatter {
         title
+        meta {
+          title
+          description
+        }
         image
       }
       html

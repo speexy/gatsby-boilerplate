@@ -6,14 +6,14 @@ import './global.css';
 import styles from './layout.module.css';
 
 
-export default ({ children }) => {
+export default ({ children, meta }) => {
 
     return (
         <div>
             <Helmet
-                title="Title"
+                title={meta.title}
                 meta={[
-                    { name: 'description', content: 'Description' },
+                    { name: 'description', content: `${meta.description}` },
                     { name: 'keywords', content: 'keywords' },
                 ]}
             />

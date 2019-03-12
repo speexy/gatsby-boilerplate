@@ -6,10 +6,10 @@ import styles from './blog.module.css';
 
 export default ({ data }) => {
 
-    const { title } = data.thisPage.frontmatter;
+    const { title, meta } = data.thisPage.frontmatter;
 
     return (
-        <Layout>
+        <Layout meta={meta}>
             <div>
                 <h1>{title}</h1>
                 {
@@ -36,6 +36,10 @@ export const blogQuery = graphql`
     thisPage: markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
         title
+        meta {
+          title
+          description
+        }
       }
     }
     posts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/blog\//"}}) {

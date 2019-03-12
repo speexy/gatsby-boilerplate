@@ -5,10 +5,10 @@ import styles from './index.module.css';
 
 export default ({ data }) => {
 
-    const { title } = data.markdownRemark.frontmatter;
+    const { title, meta } = data.markdownRemark.frontmatter;
 
     return (
-        <Layout>
+        <Layout meta={meta}>
             <div>
                 <h1>{title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} ></div>
@@ -23,6 +23,10 @@ export const indeQuery = graphql`
     markdownRemark(fields: { slug: { eq: $path } }) {
       frontmatter {
         title
+        meta {
+          title
+          description
+        }
       }
       html
     }
