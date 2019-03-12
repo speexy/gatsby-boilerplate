@@ -20,6 +20,10 @@ collections:
                 {label: "Meta Title", name: "title", widget: "string", hint: "This is the preview title when shared, i.e. in facebook, and also used for SEO"},
                 {label: "Meta Description", name: "description", widget: "text", hint: "This is the preview description when shared, i.e. in facebook, and also used for SEO"}
               ]}
+            - {label: "Image", name: "image", widget: "object", fields: [
+                {label: "Image", name: "src", widget: "image"},
+                {label: "Alt Text", name: "alt", widget: "string", hint: "Description of the image for screen readers and SEO. Leave empty only if it is purely for decoration.", required: false, default:""}
+              ]}
             - {label: "Body", name: "body", widget: "markdown"}
       - file: "content/blog.md"
         label: "Blog"
@@ -30,6 +34,10 @@ collections:
             - {label: "Seo", name: "meta", widget: "object", fields: [
                 {label: "Meta Title", name: "title", widget: "string", hint: "This is the preview title when shared, i.e. in facebook, and also used for SEO"},
                 {label: "Meta Description", name: "description", widget: "text", hint: "This is the preview description when shared, i.e. in facebook, and also used for SEO"}
+              ]}
+            - {label: "Image", name: "image", widget: "object", fields: [
+                {label: "Image", name: "src", widget: "image"},
+                {label: "Alt Text", name: "alt", widget: "string", hint: "Description of the image for screen readers and SEO. Leave empty only if it is purely for decoration.", required: false, default:""}
               ]}
             - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
@@ -45,5 +53,8 @@ collections:
           {label: "Meta Description", name: "description", widget: "text", hint: "This is the preview description when shared, i.e. in facebook, and also used for SEO"}
         ]}
       - {label: "Excerpt", name: "excerpt", widget: "markdown", pattern: ['^.{0,350}$', "Must have between 0 and 350 characters"] }
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Image", name: "image", widget: "object", fields: [
+          {label: "Image", name: "src", widget: "image"},
+          {label: "Alt Text", name: "alt", widget: "string", hint: "Description of the image for screen readers and SEO. Leave empty only if it is purely for decoration.", required: false, default:""}
+        ]}
       - {label: "Body", name: "body", widget: "markdown"}

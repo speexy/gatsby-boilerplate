@@ -12,7 +12,7 @@ export default ({ data }) => {
         <Layout meta={meta}>
             <div className={styles.post}>
                 <h1>{title}</h1>
-                <img src={image}/>
+                <img src={image.src} alt={image.alt}/>
                 <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} ></div>
             </div>
         </Layout>
@@ -30,7 +30,10 @@ export const postQuery = graphql`
           title
           description
         }
-        image
+        image {
+          src
+          alt
+        }
       }
       html
     }

@@ -6,11 +6,12 @@ import styles from './blog.module.css';
 
 export default ({ data }) => {
 
-    const { title, meta } = data.thisPage.frontmatter;
+    const { title, meta, image } = data.thisPage.frontmatter;
 
     return (
         <Layout meta={meta}>
             <div>
+                <img src={image.src} alt={image.alt}/>
                 <h1>{title}</h1>
                 {
                     data.posts.edges.map(( post, index ) => {
@@ -39,6 +40,10 @@ export const blogQuery = graphql`
         meta {
           title
           description
+        }
+        image {
+          src
+          alt
         }
       }
     }

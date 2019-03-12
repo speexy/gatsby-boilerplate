@@ -5,7 +5,9 @@ meta:
   title: Post 1
   description: description 1
 excerpt: hello world
-image: /media/hex.jpg
+image:
+  src: /media/hex.jpg
+  alt: post hero image
 content:
   - col1: >-
       Keytar cred +1 four loko humblebrag. Skateboard meggings gastropub roof
