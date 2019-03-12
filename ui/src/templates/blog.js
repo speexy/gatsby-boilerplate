@@ -16,8 +16,8 @@ export default ({ data }) => {
                 {
                     data.posts.edges.map(( post, index ) => {
                         return (
-                            <Link to={post.node.fields.slug}>
-                                <article key={index}>
+                            <Link to={post.node.fields.slug} key={index}>
+                                <article >
                                     <h1>{post.node.frontmatter.title}</h1>
                                     <p>{post.node.frontmatter.excerpt}</p>
                                 </article>
