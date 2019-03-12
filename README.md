@@ -3,5 +3,5 @@
 
 **don't forget to**
 - change the favicon
-- update lang meta tag if language is other than "en" (Layout.js)
+- update site vars (siteName, siteLang, siteUrl, siteDescription, siteImage) in Layout.js
 - update the branch name in the cms' config.yml

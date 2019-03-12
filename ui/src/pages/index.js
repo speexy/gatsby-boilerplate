@@ -8,7 +8,7 @@ export default ({ data }) => {
     const { title, meta, image } = data.markdownRemark.frontmatter;
 
     return (
-        <Layout meta={meta}>
+        <Layout meta={meta} img={image}>
             <div>
                 <h1>{title}</h1>
                 <img src={image.src} alt={image.src}/>

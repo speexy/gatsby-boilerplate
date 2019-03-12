@@ -9,7 +9,7 @@ export default ({ data }) => {
     const { title, meta, image } = data.thisPage.frontmatter;
 
     return (
-        <Layout meta={meta}>
+        <Layout meta={meta} img={image}>
             <div>
                 <img src={image.src} alt={image.alt}/>
                 <h1>{title}</h1>

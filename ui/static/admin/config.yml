@@ -17,8 +17,8 @@ collections:
         fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Seo", name: "meta", widget: "object", fields: [
-                {label: "Meta Title", name: "title", widget: "string", hint: "This is the preview title when shared, i.e. in facebook, and also used for SEO"},
-                {label: "Meta Description", name: "description", widget: "text", hint: "This is the preview description when shared, i.e. in facebook, and also used for SEO"}
+                {label: "Meta Title", name: "title", widget: "string", hint: "This is the preview title when shared, i.e. in facebook, twitter, and also used for SEO"},
+                {label: "Meta Description", name: "description", widget: "text", hint: "This is the preview description when shared, i.e. in facebook, twitter, and also used for SEO"}
               ]}
             - {label: "Image", name: "image", widget: "object", fields: [
                 {label: "Image", name: "src", widget: "image"},

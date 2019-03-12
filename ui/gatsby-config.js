@@ -1,8 +1,4 @@
 module.exports = {
-    siteMetadata: {
-        title: '',
-        description: ''
-    },
     pathPrefix: '/',
     plugins: [
         'gatsby-plugin-react-helmet',
