@@ -6,10 +6,12 @@ import styles from './blog.module.css';
 
 export default ({ data }) => {
 
+    const { title } = data.thisPage.frontmatter;
+
     return (
         <Layout>
             <div>
-                <h1>{data.thisPage.frontmatter.title}</h1>
+                <h1>{title}</h1>
                 {
                     data.posts.edges.map(( post, index ) => {
                         return (

@@ -6,11 +6,13 @@ import styles from './post.module.css';
 
 export default ({ data }) => {
 
+    const { title, image } = data.markdownRemark.frontmatter;
+
     return (
         <Layout>
             <div className={styles.post}>
-                <h1>{data.markdownRemark.frontmatter.title}</h1>
-                <img src={data.markdownRemark.frontmatter.image}/>
+                <h1>{title}</h1>
+                <img src={image}/>
                 <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} ></div>
             </div>
         </Layout>
